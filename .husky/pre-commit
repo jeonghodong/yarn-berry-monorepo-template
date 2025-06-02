@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# 린트와 포맷팅 실행
 yarn lint-staged
 yarn format
+
+# 테스트 실행
+echo "Running tests..."
+yarn test:all
