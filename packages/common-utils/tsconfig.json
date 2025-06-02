@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "**/*.ts",
+    ".next/types/**/*.ts",
+    "jset.config.ts",
+    "jest.setup.ts"
+  ]
+}

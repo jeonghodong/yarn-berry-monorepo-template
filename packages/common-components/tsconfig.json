@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "jset.config.ts",
+    ".storybook/*",
+    "jest.setup.ts"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  // 각 프로젝트에 오버라이드할 tsconfig 파일이 있다면 추가
+  // "references": [
+  //   {
+  //     "path": "packages/common-components"
+  //   },
+  //   {
+  //     "path": "packages/common-styles"
+  //   },
+  //   {
+  //     "path": "packages/common-utils"
+  //   },
+  //   {
+  //     "path": "apps/a-project"
+  //   }
+  // ],
+
+  "exclude": ["packages/**/dist/**", "apps/**/dist/**"],
+  "include": []
+}

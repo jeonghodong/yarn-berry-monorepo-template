@@ -1,4 +1,49 @@
 {
   "name": "yarn_berry_monorepo_template",
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.2.2",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "a-project": "yarn workspace a-project",
+    "b-project": "yarn workspace b-project",
+    "common-components": "yarn workspace @common/components",
+    "common-hooks": "yarn workspace @common/hooks",
+    "common-styles": "yarn workspace @common/styles",
+    "common-utils": "yarn workspace @common/utils",
+    "test:all": "yarn workspaces foreach --all --include @common/components --include @common/utils run test",
+    "postinstall": "husky install",
+    "format": "prettier --cache --write .",
+    "lint": "eslint --cache .",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "eslint": "^9.3.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.2.5",
+    "typescript": "^4"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "resolutions": {
+    "@storybook/core-common/webpack": "^5",
+    "@storybook/core-server/webpack": "^5",
+    "@storybook/react/webpack": "^5"
+  }
 }

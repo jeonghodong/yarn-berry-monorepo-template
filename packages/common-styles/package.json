@@ -1,0 +1,8 @@
+{
+  "name": "@common/styles",
+  "packageManager": "yarn@4.2.2",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@emotion/react": "^11.11.4"
+  }
+}
